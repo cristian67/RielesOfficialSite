@@ -1,0 +1,147 @@
+/*font */
+@import url(http://fonts.googleapis.com/css?family=Croissant+One);
+
+.croisant{
+    font-family: 'Croissant One', cursive;
+}
+
+.white{
+    color:white;
+}
+
+.blue{
+    color:#15ACD1;
+}
+
+
+/* estilos del website: */
+
+body{background: radial-gradient( circle at top, #13294e, #07050f);}
+
+img{
+    box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -webit-box-shadow: 0px 0px 10px #000;
+}
+
+.navbar-brand{
+    height: auto;
+    padding:25px;
+}
+
+.hide{
+    display:none;
+}
+
+
+header {
+    background-image: url(https://scontent-grt2-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11891027_882817641802949_924493070427989895_n.jpg?oh=9730fda25cdbde8f0055a3641de00126&oe=57688C9C);
+    min-height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.blur{
+    min-height: inherit;
+    background-color: rgba(0,0,0,.5);
+}
+
+section{
+    height: auto;
+    padding-top: 95px;
+}
+
+footer{
+    min-height: 350px;
+    background: radial-gradient( circle , #2b8833, #23702a);
+    border-top: 3px solid #404040;
+    padding-top: 5%;
+
+}
+
+
+#title{
+    font-size: 3em;
+    color: floralwhite;
+    text-align: center;
+    padding-top: 10%;
+}
+
+#subtitle{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#artitle{
+    color: white;
+    font-size: 4em;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+
+.btn{
+    border-radius: 0px;
+}
+
+.btn-web{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-top: 1%;
+    -webkit-transition: background-color .5s, border .5s;
+    -moz-transition: background-color .5, border .5s;
+    -o-transition:  background-color .5s, border .5s;
+}
+
+.btn-web:hover{
+    background-color: white;
+    border: 5px solid white;
+    color: tomato;
+    -webkit-transition: background-color .5s, border .5s;
+    -moz-transition: background-color .5, border .5s;
+    -o-transition:  background-color .5s, border .5s;
+    cursor: pointer;
+}
+
+/* estilo tab Admin */
+
+
+/* Media Querys para hacer Responsivo el texto Titulo y subTi.. */
+
+@media(max-width: 350px) {
+
+    #title {
+        font-size: 3em;
+        color: floralwhite;
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    #subtitle {
+        font-size: 1em;
+        color: white;
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    header {
+        background-image: url(https://i.ytimg.com/vi/msEwmVZ4wp4/maxresdefault.jpg);
+        min-height: 85vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+    }
+
+    footer{
+        min-height: 150px;
+        background: #009E66;
+    }
+
+}
