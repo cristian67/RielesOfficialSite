@@ -41,5 +41,10 @@ class Post extends Model implements SluggableInterface {
         return $this->hasOne('Blog\Tag','posts_id_2');
     }
 
+    public function getTagedAttribute()
+    {
+        return $this->tag->tags;
+    }
+
 
 }

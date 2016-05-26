@@ -109,9 +109,10 @@ class PostsController extends Controller {
 	 */
 	public function update(EditPostRequest $request, $id)
 	{
-		$post = Post::findOrFail($id);
 
-		$tags = $post->tag->tags;
+		$tag = Post::findOrFail($id);
+
+		//dd($post->tag);
 
 		$post->fill(Request::all());
 

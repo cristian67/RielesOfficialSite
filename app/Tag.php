@@ -11,4 +11,8 @@ class Tag extends Model {
         return $this->tags;
     }
 
+    public function post()
+    {
+        return $this->belongsTo('Blog\Post','posts_id_2');
+    }
 }
