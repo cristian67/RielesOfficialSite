@@ -29,14 +29,6 @@ class PostTableSeeder extends Seeder
                 'photo'       => $faker->imageUrl($width = 640, $height = 480)
 
             ));
-
-            \DB::table('tags')->insert(array(
-
-                'posts_id_2' => $id,
-                'tags'     => $faker->word
-
-            ));
-
         }
     }
 }

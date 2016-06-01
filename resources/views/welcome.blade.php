@@ -1,5 +1,5 @@
 @extends('template.main')
-@section('title'){{'Larablog'}}@endsection
+@section('title'){{'Bienvenido'}}@endsection
 @section('content')
 	@include('template.partials.main-nav')
 	<!-- Para el scroll al recarar pagina-->
@@ -18,12 +18,14 @@
 			<div id="title" style="font-family: 'Akronim', cursive; color: #BE5C00;">Rieles<div>
 			<div id="subtitle" class="croisant"><h3>Sitio Official</h3></div>
 			<div align="center">
-				<a onclick="$('#posts').animatescroll({scrollSpeed:2000, easing:'easeInOutBounce'});" style= "font-family: 'Allerta Stencil', sans-serif;" class="btn btn-web btn-lg">Desplegar</a>
+				<a onclick="$('#hi').animatescroll({scrollSpeed:2000, easing:'easeInOutBounce'});" style= "font-family: 'Allerta Stencil', sans-serif;" class="btn btn-web btn-lg">Desplegar</a>
 			</div>
 		</div>
 	</header>
 	@endif
-	<hr>
+	<hr id="hi">
+	<p>
+	<hd>
 <!--Contenido del post-->
 	<body class="fondo">
 		@include("news.post")

@@ -15,12 +15,9 @@
             <div class="col-md-2"></div>
             <div class="col-md-8" align="center">
                 <br>
-                    <?php
-                    $tags = explode(',', $post->tags);
-                    ?>
-                    @foreach($tags as $t)
-                        <a href="../tag/{{$t}}" class="tl"><label class="label label-success">#{{$t}}</label></a>
-                    @endforeach
+                @foreach($post->tags as $t)
+                    <a href="/tag/{{$t->tags}}"><label class="label label-primary">#{{$t->tags}}</label></a>
+                @endforeach
                     <br>
                     <hr>
                     <div align="justify">
@@ -29,15 +26,6 @@
                         <br>
                         <br>
                     </div>
-                    <?php $video = $post->video ?>
-                    @if($video!='')
-                    <div class="col-xs-10 col-xs-push-1 center-block">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="600" height="338" src="{{$post->video}}" frameborder="1" allowfullscreen></iframe>
-                         </div>
-                        </br>
-                    </div>
-                    @endif
                 <!-- inicio comments.-->
                     <div class="fb-comments" data-colorscheme="dark" data-href="http://localhost/blog/public/articulos/{{$post->slug}}" data-width="100%" data-numposts="10"></div>
                     <!-- Fin -->

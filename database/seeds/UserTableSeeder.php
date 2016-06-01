@@ -21,24 +21,15 @@ class UserTableSeeder extends Seeder
 
             'username'   => 'cristian67',
 
+            'rol'        => 'admin',
+
+            'email'      => 'a@gmail.com',
+
             'password'   => \Hash::make('secret')
 
 
         ));
 
-        \DB::table('emails')->insert(array(
-
-            'user_id_3' => $id,
-            'email'     => 'a@gmail.com'
-
-        ));
-
-        \DB::table('rols')->insert(array(
-
-            'user_id' => $id,
-            'type'    => 'admin'
-
-        ));
 
         $faker = Faker::create();
         for ($i=0 ; $i<4 ; $i++) {
@@ -50,26 +41,13 @@ class UserTableSeeder extends Seeder
 
                 'username'   => $faker->unique()->userName,
 
+                'rol'        => 'common',
+
+                'email'      => $faker->email,
+
                 'password'   => \Hash::make('123456')
 
-
             ));
-
-            \DB::table('emails')->insert(array(
-
-                'user_id_3' => $id,
-                'email'     => $faker->unique()->email
-
-            ));
-
-            \DB::table('rols')->insert(array(
-
-                'user_id' => $id,
-                'type'    => 'common'
-
-            ));
-
-
 
         }
     }

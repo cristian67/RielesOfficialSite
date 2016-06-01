@@ -20,8 +20,8 @@ class Multimedia extends Model {
      */
     protected $hidden = [];
 
-    public function tag()
+    public function galerias()
     {
-        return $this->hasOne('Blog\Types_Multimedia','multimedias_id_2');
+        return $this->belongsToMany('Blog\Galerias','galeria_multimedia','galerias_2_id','multimedias_2_id');
     }
 }

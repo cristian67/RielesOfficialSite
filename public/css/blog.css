@@ -15,18 +15,36 @@
 
 /* Fondos */
 .fondo{
-    background-image: url("../../public/img/geo1.jpg");
+    background-image: url("../img/geo1.jpg");
     background-attachment:fixed;
     font-family: 'Poiret One', cursive;
     font-size: medium
 }
-/*barra principal */
-.navbar-default{
-    background: black;
+.fondo2{
+    background-image: url("../img/wall4.jpg");
+    background-attachment:fixed;
+    font-size: medium
 }
 
+.fondo3{
+    background-image: url("../img/dark.jpg");
+    background-attachment:fixed;
+    font-size: medium
+}
+/*barra principal */
+.navbar-brand{
+    padding: 29.5px 15px 40px 15px;
+}
+.navbar-default{
+    background: black;
+    padding: 0px 0px 0px 1px;
+}
 /* estilos del website: */
 
+#hi{
+    height: auto;
+    padding: 30px;
+}
 
 img{
     box-shadow: 0px 0px 10px #000;
@@ -34,10 +52,6 @@ img{
     -webit-box-shadow: 0px 0px 10px #000;
 }
 
-.navbar-brand{
-    height: auto;
-    padding:25px;
-}
 
 .hide{
     display:none;
@@ -50,8 +64,6 @@ header {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-
 }
 
 .blur{
@@ -61,7 +73,7 @@ header {
 
 section{
     height: auto;
-    padding-top: 95px;
+    padding-top: 999px;
 }
 
 footer{
@@ -162,11 +174,7 @@ footer{
     max-width: 100%;
     width: 100%;
 }
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
+
 .white-panel {
     position: absolute;
     background: #FA8E00;
@@ -187,3 +195,54 @@ img {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
+/* Estilo del tag*/
+
+#tag{
+    background-image: url('https://scontent-grt2-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/11822526_875501389201241_2226980070287557737_n.jpg?oh=c6f19535699aed3528b1a93241738b1d&oe=57971617');
+    min-height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-bottom: 5px solid tomato;
+}
+
+#tagged	{
+    color: white;
+    font-size: 3em;
+    padding-top: 12vh;
+    text-align: center;
+}
+
+.tgs{
+    padding:0px;
+}
+
+#taggex{
+    color: white;
+    font-size: 2.5em;
+    padding-top: 14vh;
+    text-align: center;
+}
+
+#taggex:hover{
+    color: steelblue;
+    font-size: 2.5em;
+    padding-top: 14vh;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tl:hover{
+    cursor: pointer;
+}
+
+#bhome{
+    min-height: 40vh;
+    background-image: url('https://download.unsplash.com/photo-1428223501723-d821c5d00ca3');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+

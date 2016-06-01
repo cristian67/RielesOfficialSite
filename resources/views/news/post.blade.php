@@ -1,5 +1,5 @@
-<div class="container text-center">
-    <div id="posts">
+<div class="container text-center" >
+    <section id="posts">
         @foreach($posts as $p)
             <div class="post white-panel">
                 <h3 style="font-family: 'Lobster Two', cursive;">{{$p->title}}</h3><hr>
@@ -7,14 +7,16 @@
                 <div class="post panel-info">
                     <p>{{$p->description}}</p>
                     <p>
-                        <a href="#"><label class="label label-primary">#{{$p->tag->tags}}</label></a>
-                        <p>
-                        <a href='#' class="btn btn-info">Leer más</a>
-                        <p>
+                        @foreach($p->tags as $t)
+                        <a href="tag/{{$t->tags}}"><label class="label label-primary">#{{$t->tags}}</label></a>
+                        @endforeach
+                    <p>
+                        <a href='articulos/{{$p->slug}}' class="btn btn-info">Leer más</a>
+                    <p>
                         <label class="label label-warning"><i class="glyphicon glyphicon-calendar">Creado: {{$p->created_at}}</i></label>
                     </p>
                 </div>
             </div>
         @endforeach
-    </div>
+    </section>
 </div>

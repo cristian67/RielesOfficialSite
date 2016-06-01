@@ -23,8 +23,8 @@
                 </li>
                 <li><a href="index.php#anclaje">Noticias</a></li>
                 <li><a href="discografia.php">Discografia</a></li>
-                <li><a href="{{route('videos')}}" >Videos</a></li>
-                <li><a href="galleria.php">Galleria</a></li>
+                <li><a href="#" >Videos</a></li>
+                <li><a href={{route('galerias')}}>Galleria</a></li>
                 <li><a href="store.php">Store</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

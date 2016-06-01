@@ -36,15 +36,17 @@ class Post extends Model implements SluggableInterface {
      */
     protected $hidden = [];
 
-    public function tag()
+    public function tags()
     {
-        return $this->hasOne('Blog\Tag','posts_id_2');
+        return $this->belongsToMany('Blog\Tag','post_tag','posts_2_id','tags_2_id');
     }
 
     public function getTagedAttribute()
     {
-        return $this->tag->tags;
+        return $this->tags->tags;
     }
+
+
 
 
 }

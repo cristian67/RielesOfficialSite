@@ -5,11 +5,12 @@ use Blog\Http\Controllers\Controller;
 
 use Blog\Http\Requests\EditPostRequest;
 use Blog\Post;
-use Blog\Tag;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use phpDocumentor\Reflection\DocBlock\Tag;
+
 
 
 class PostsController extends Controller {
@@ -97,7 +98,6 @@ class PostsController extends Controller {
 	public function edit($id)
 	{
 		$post = Post::findOrFail($id);
-
 		return view('admin.posts.edit', compact('post'));
 	}
 

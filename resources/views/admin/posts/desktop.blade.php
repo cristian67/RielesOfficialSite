@@ -22,7 +22,11 @@
                 <tr>
                     <td>{{$post->title}}</td>
                     <td>{{$post->description}}</td>
-                    <td>{{$post->tag->tags}}</td>
+                    <td>
+                        @foreach($post->tags as $t)
+                            <label class="label label-primary">#{{$t->tags}}</label>
+                        @endforeach
+                    </td>
                     <td>
                         <div class="btn-group-center">
                             <a href="{{route('home.posts.edit',$post)}}" class="btn btn-warning"><i class="fa fa-edit"></i></a>

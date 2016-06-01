@@ -16,12 +16,9 @@ class CreateGaleriasTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
+			$table->enum('type', ['imagen','video']);
 			$table->text('description');
-
-			$table->integer('multimedias_id_3')->unsigned();
-			$table->foreign('multimedias_id_3')
-				->references('id')
-				->on('multimedias');
+			$table->string('photo');
 
 			$table->timestamps();
 		});

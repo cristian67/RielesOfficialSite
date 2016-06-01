@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMultimediasTable extends Migration {
+class CreateEmailsConstumersTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,15 @@ class CreateMultimediasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('multimedias', function(Blueprint $table)
+		Schema::create('emails_constumers', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->text('description');
-			$table->string('url');
-			$table->enum('type', ['imagen','video']);
+			$table->string('email')->unique();
+
+			$table->integer('constumers_id_2')->unsigned();
+			$table->foreign('constumers_id_2')
+				->references('id')
+				->on('constumers');
 
 			$table->timestamps();
 		});
@@ -30,7 +33,7 @@ class CreateMultimediasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('multimedias');
+		Schema::drop('emails_constumers');
 	}
 
 }

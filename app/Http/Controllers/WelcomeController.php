@@ -1,6 +1,8 @@
 <?php namespace Blog\Http\Controllers;
 
 use Blog\Post;
+use phpDocumentor\Reflection\DocBlock\Tag;
+
 
 class WelcomeController extends Controller {
 
@@ -15,31 +17,40 @@ class WelcomeController extends Controller {
 	|
 	*/
 
+		/* Funcionando */
 	public function index()
 	{
-		$posts = \DB::table('posts')->orderBy('id','desc')->paginate(4);
-
-		return view('welcome')
-		->with('posts',$posts);
+		$posts = Post::orderBy('id','desc')->paginate(35);
+		return view('welcome',compact('posts'));
 
 	}
 
+	 //Funcionando
 	public function article($slug)
 	{
 		$post = Post::findBySlug($slug);
 
 		return view('article')
-			   ->with('post',$post);
+			->with('post',$post);
 	}
 
+	/* aun nope*/
 	public function tags($tag){
 
-		$posts = Post::where('tags', 'LIKE', '%'.$tag.'%')->get();
+		$post = Post::select('posts.*','tags.tags as tags')
+                        ->where('tags.tags', 'LIKE', '%'.$tag.'%')
+						->leftJoin('post_tag', 'posts.id', '=', 'post_tag.posts_2_id')
+						->leftJoin('tags', 'post_tag.tags_2_id', '=', 'tags.id')
+						->get();
+
+		//return dd($post);
 
 		return view('tags')
-			->with('posts', $posts)
+			->with('post',$post)
 			->with('tag', $tag);
 	}
+
+
 
 	public function videos()
 	{

@@ -4,14 +4,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeria extends Model {
 
-    protected $table = 'Multimedias';
+    protected $table = 'galerias';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['title', 'description','type'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -20,15 +20,9 @@ class Galeria extends Model {
      */
     protected $hidden = [];
 
-    public function types()
+    public function multimedias()
     {
-        return $this->hasOne('Blog\Types_Galeria','galerias_id');
-    }
-
-    public function getGaleriaAttribute()
-    {
-        return $this->title
-                    ->description;
+        return $this->belongsToMany('Blog\Multimedia','galeria_multimedia','galerias_2_id','multimedias_2_id');
     }
 
 }

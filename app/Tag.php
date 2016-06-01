@@ -6,13 +6,9 @@ class Tag extends Model {
 
     protected  $table='tags';
 
-    public function getTagAttribute()
-    {
-        return $this->tags;
-    }
 
-    public function post()
+    public function posts()
     {
-        return $this->belongsTo('Blog\Post','posts_id_2');
+        return $this->belongsToMany('Blog\Post','post_tag','posts_2_id','tags_2_id');
     }
 }

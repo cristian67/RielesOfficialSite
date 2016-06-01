@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-warning">
-                    <div class="panel-heading">Actualizar: {{$post->taged}}</div>
+                    <div class="panel-heading">Actualizar: {{$post->title}}</div>
                     <div class="panel-body">
                         @include('admin.partials.message')
                         <!-- "model" es para cargar los datos, ai q pasar post en la url x eso el route es array-->
