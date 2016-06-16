@@ -20,10 +20,10 @@ class AdminController extends Controller {
     /*Escritorio */
     public function desktop(){
 
+
         $posts = \DB::table('posts')->orderBy('id','desc')->paginate(10);
         return view('desktop')
             ->with('posts',$posts);
-
         }
 
     public function desktopVideo(){

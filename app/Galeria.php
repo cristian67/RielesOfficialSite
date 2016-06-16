@@ -11,7 +11,7 @@ class Galeria extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'description','type'];
+    protected $fillable = ['title', 'description','type','photo'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -22,7 +22,7 @@ class Galeria extends Model {
 
     public function multimedias()
     {
-        return $this->belongsToMany('Blog\Multimedia','galeria_multimedia','galerias_2_id','multimedias_2_id');
+        return $this->hasMany('Blog\Multimedia','galerias_id');
     }
 
 }

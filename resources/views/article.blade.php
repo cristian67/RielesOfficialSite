@@ -2,6 +2,15 @@
 @section('title'){{$post->title . '| Rieles'  }}@endsection
 @section('content')
     @include('template.partials.main-nav')
+    <style>
+        #fbcomments,
+        .fb-comments,
+        .fb-comments iframe[style],
+        .fb-comments span {
+            width: 100% !important;
+        }</style>
+
+
     <div class="row-fluid" style="background-image: url('{{$post->photo}}'); min-height: 50vh; background-size: cover; background-position: center; background-attachment: fixed">
         <div class="blur">
             <div id="artitle" class="croisant">
@@ -10,6 +19,7 @@
         </div>
     </div>
 
+<body class="fondo3">
     <div class="row-fluid">
         <div class="container">
             <div class="col-md-2"></div>
@@ -26,15 +36,22 @@
                         <br>
                         <br>
                     </div>
-                <!-- inicio comments.-->
-                    <div class="fb-comments" data-colorscheme="dark" data-href="http://localhost/blog/public/articulos/{{$post->slug}}" data-width="100%" data-numposts="10"></div>
-                    <!-- Fin -->
-                    <a href="{{route('home')}}" class="btn  btn-primary"><i class="fa fa-chevron-left"></i> Home </a>
-                    <br>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </div>
+                <!-- inicio comments.-->
+    <div class="container">
+        <div class="col-xs-12">
+            <div align="center">
+                    <div class="fb-comments" data-colorscheme="dark" data-href="http://localhost/blog/public/articulos/{{$post->slug}}" data-width="100%" data-numposts="10"></div>
+                    <!-- Fin -->
+                    <a href="{{route('home')}}" class="btn  btn-primary center-block"><i class="fa fa-chevron-left"></i> Home </a>
+                    <br>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
     <br>
 <!-- Zona de comentarios -->
     <div id="fb-root"></div>

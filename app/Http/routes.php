@@ -19,12 +19,14 @@ Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function(){
 Route::group(['prefix' => 'home', 'namespace'=>'Home'], function(){
 
 	Route::resource('posts','PostsController');
+	Route::resource('songs','SongsController');
+	Route::resource('albums','AlbumsController');
+	Route::resource('multimedias','MultimediasController');
+	Route::resource('galerias','GaleriasController');
 });
 
-Route::group(['prefix' => 'publico', 'namespace'=>'Publico'], function(){
 
-	Route::resource('posts','NewsController');
-});
+
 
 Route::group(['prefix' => 'article', 'namespace'=>'Article'], function(){
 
@@ -46,7 +48,23 @@ Route::controllers([
 	]);
 
 
-/*Home Route funcionando ^^*/
+/*biografia modelo ^^*/
+Route::get('/biografia', [
+	'uses'=> 'WelcomeController@biografia',
+	'as' => 'biografia'
+]);
+/*audio reproducir*/
+Route::get('/audio', [
+	'uses'=> 'WelcomeController@audio',
+	'as' => 'audio'
+]);
+/*contacto modelo ^^*/
+Route::get('/contacto', [
+	'uses'=> 'WelcomeController@contacto',
+	'as' => 'contacto'
+]);
+
+/*Index Route funcionando ^^*/
 Route::get('/', [
 	'uses'=> 'WelcomeController@index',
 	'as' => 'home'
@@ -82,6 +100,28 @@ Route::get('/galeria/videos/{id}',[
     'as'   => 'gallery',
     'uses' => 'GalleriaController@video'
 ]);
+
+//Ver Discografia
+Route::get('/discografia',[
+	'as'   => 'discografia',
+	'uses' => 'DiscoController@disco'
+]);
+
+Route::get('/discografia/music/{id}',[
+	'as'   => 'music',
+	'uses' => 'DiscoController@ver'
+]);
+
+
+Route::resource('mail','MailController');
+
+/*probar subir archivo laravel 4 con bdd*/
+Route::controller('music','MusicController');
+
+/*laravel 5*/
+Route::group(['prefix'=>'couch','namespace'=>'Couch'],function(){
+	Route::resource('files','FileController');
+});
 
 Route::get('/logout', [
 	'uses' => 'AdminController@logout',

@@ -14,26 +14,56 @@
 		</div>
 	@else
 	<header>
-		<div class="blur">
-			<div id="title" style="font-family: 'Akronim', cursive; color: #BE5C00;">Rieles<div>
-			<div id="subtitle" class="croisant"><h3>Sitio Official</h3></div>
-			<div align="center">
-				<a onclick="$('#hi').animatescroll({scrollSpeed:2000, easing:'easeInOutBounce'});" style= "font-family: 'Allerta Stencil', sans-serif;" class="btn btn-web btn-lg">Desplegar</a>
-			</div>
-		</div>
+		<section class="blur">@include('template.partials.background')</section>
 	</header>
 	@endif
 	<hr id="hi">
 	<p>
 	<hd>
 <!--Contenido del post-->
-	<body class="fondo">
+	<body class="fondo" name="anclaje">
+		<section>
 		@include("news.post")
+		</section>
 		<p>
 		<p>
-		<div class="container" align="center">
-				{!! $posts->render()!!}
-		</div>
+		<br>
+		<br>
+		<br>
+	    <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+		<section>
+			<div class="container" align="center">
+					{!! $posts->render()!!}
+			</div>
+		</section>
+		<hr>
+<!--Video-->
+<style>
+	.embed-container iframe,
+	.embed-container object,
+	.embed-container embed {
+		position: static ;
+		width: 45%;
+	}
+</style>
+	<section style="background: black">
+     <div class="container">
+		 <div class="col-xs-12">
+			 <h6 style="font-family: 'Poiret One', cursive"><a href="#">@RielesBanda</a></h6>
+			 <div align="center" class="embed-container center-block">
+				<iframe height="370" src="https://www.youtube.com/embed/S7DVADCjN_w" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			 </div>
+		 </div>
+	 </div>
+	</section>
 	</body>
 	@include('template.partials.footer')
 @stop

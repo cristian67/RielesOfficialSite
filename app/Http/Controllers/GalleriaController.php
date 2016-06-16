@@ -2,6 +2,7 @@
 
 
 use Blog\Galeria;
+use Blog\Multimedia;
 
 
 
@@ -31,12 +32,10 @@ class GalleriaController extends Controller {
 	public function ver($id)
 	{
         $foto = Galeria::findOrFail($id)
-                            ->select('multimedias.*','galerias.type as type')
-                            ->where('galerias.id', '=', $id)
-                            ->join('galeria_multimedia', 'galerias.id', '=', 'galeria_multimedia.galerias_2_id')
-                            ->join('multimedias', 'galeria_multimedia.multimedias_2_id', '=', 'multimedias.id')
-                            ->get();
-
+						->select('multimedias.*','galerias.type as tipo','galerias.title as titulo')
+						->where('galerias.id', '=', $id)
+						->join('multimedias', 'galerias.id', '=', 'multimedias.galerias_id')
+						->get();
 
         //return dd($foto);
 
@@ -49,11 +48,10 @@ class GalleriaController extends Controller {
 	public function video($id)
 	{
         $video = Galeria::findOrFail($id)
-                            ->select('multimedias.*','galerias.type as type')
-                            ->where('galerias.id', '=', $id)
-                            ->join('galeria_multimedia', 'galerias.id', '=', 'galeria_multimedia.galerias_2_id')
-                            ->join('multimedias', 'galeria_multimedia.multimedias_2_id', '=', 'multimedias.id')
-                            ->get();
+								->select('multimedias.*','galerias.type as tipo','galerias.title as titulo')
+								->where('galerias.id', '=', $id)
+								->join('multimedias', 'galerias.id', '=', 'multimedias.galerias_id')
+								->get();
 
 
        //return dd($video);

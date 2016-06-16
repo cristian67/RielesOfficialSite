@@ -15,13 +15,13 @@
 
 /* Fondos */
 .fondo{
-    background-image: url("../img/geo1.jpg");
+    background-image: url("../img/forest.jpg");
     background-attachment:fixed;
     font-family: 'Poiret One', cursive;
     font-size: medium
 }
 .fondo2{
-    background-image: url("../img/wall4.jpg");
+    background-image: url("../img/riel3.jpg");
     background-attachment:fixed;
     font-size: medium
 }
@@ -30,6 +30,11 @@
     background-image: url("../img/dark.jpg");
     background-attachment:fixed;
     font-size: medium
+}
+.fondo4{
+    background-image: url("http://www.hdwallwide.com/wp-content/uploads/2014/10/live-concert-crowd-hd-wallpapers-1080p-hdwallwide-com.jpg");
+    background-attachment:fixed;
+    font-size: medium;
 }
 /*barra principal */
 .navbar-brand{
@@ -43,7 +48,7 @@
 
 #hi{
     height: auto;
-    padding: 30px;
+    padding: 10px;
 }
 
 img{
@@ -57,9 +62,7 @@ img{
     display:none;
 }
 
-
 header {
-    background-image: url(https://scontent-grt2-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11891027_882817641802949_924493070427989895_n.jpg?oh=9730fda25cdbde8f0055a3641de00126&oe=57688C9C);
     min-height:100vh;
     background-size: cover;
     background-position: center;
@@ -70,18 +73,41 @@ header {
     min-height: inherit;
     background-color: rgba(0,0,0,.5);
 }
+.background2{
+ min-height: inherit;
+}
 
-section{
+.section{
     height: auto;
     padding-top: 999px;
 }
 
-footer{
-    min-height: 350px;
-    background: radial-gradient( circle , #2b8833, #23702a);
+footer
+{
+    text-align: center;
+    min-height: 100px;
+    background: radial-gradient( circle , #2b8833, #101e1e);
     border-top: 3px solid #404040;
     padding-top: 5%;
+}
 
+footer p
+{
+    text-align: justify;
+}
+
+span.redes a
+{
+    color: orange;
+}
+
+.avatar
+{
+    border: 2px solid     orange;
+    border-radius: 80%;
+    float: center;
+    height: 100px;
+    width: 100px;
 }
 
 
@@ -136,7 +162,7 @@ footer{
 
 /* Media Querys para hacer Responsivo el texto Titulo y subTi.. */
 
-@media(max-width: 350px) {
+@media(max-width: 750px) {
 
     #title {
         font-size: 3em;
@@ -153,7 +179,7 @@ footer{
     }
 
     header {
-        background-image: url(https://i.ytimg.com/vi/msEwmVZ4wp4/maxresdefault.jpg);
+        background-image: url(http://rielesbanda.hol.es/img/rieles4Ma.jpg);
         min-height: 85vh;
         background-size: cover;
         background-position: center;
@@ -174,10 +200,14 @@ footer{
     max-width: 100%;
     width: 100%;
 }
-
+.photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
 .white-panel {
     position: absolute;
-    background: #FA8E00;
+    background: #e06c00;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
     padding: 10px;
 }
@@ -244,5 +274,93 @@ footer{
     background-position: center;
     background-attachment: fixed;
 }
+/* Formulario Emails*/
+.contact-form{
+    margin-top:3em;
+}
+.main-contact form input[type="text"],.main-contact form textarea{
+    width: 100%;
+    padding: 10px 14px;
+    border: 3px solid #000;
+    font-size: 1.2em;
+    margin-bottom:1.5em;
+    color: #000;
+    outline: none;
+    font-weight:400;
+}
+.main-contact form textarea {
+    resize:none;
+    height:201px;
+    border-radius: 0;
+}
+.main-contact form input[type="submit"] {
+    font-size: 1.35em;
+    font-weight:400;
+    color: #fff;
+    outline: none;
+    border: 3px solid #000;
+    padding: 0.5em 3em;
+    background:#000;
+    margin-top: 0em;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+.main-contact form input[type="submit"]:hover{
+    background:#fff;
+    color:#000;
+}
+.contact_info {
+    margin-top:2em;
+}
+.contact_info h3 {
+    color: #000;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom:0.7em;
+}
+
+/* face responsivo*/
+@media only screen and (max-width: 767px) {
+    .fb-comments {
+        width: 100% !important;
+    }
+    .fb-comments iframe[style] {
+        width: 100% !important;
+    }
+    .fb-like-box {
+        width: 100% !important;
+    }
+    .fb-like-box iframe[style] {
+        width: 100% !important;
+    }
+    .fb-comments span {
+        width: 100% !important;
+    }
+    .fb-comments iframe span[style] {
+        width: 100% !important;
+    }
+    .fb-like-box span {
+        width: 100% !important;
+    }
+    .fb-like-box iframe span[style] {
+        width: 100% !important;
+    }
+}
+
+.sound{
+    padding: 0px 0px 0px 0px;
+    position: inherit;
+    top: 0%;
+    left: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
 
 

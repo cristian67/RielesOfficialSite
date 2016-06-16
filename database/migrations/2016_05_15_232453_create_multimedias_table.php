@@ -19,7 +19,13 @@ class CreateMultimediasTable extends Migration {
 			$table->string('url');
 			$table->enum('type', ['imagen','video']);
 
+			$table->integer('galerias_id')->unsigned();
+			$table->foreign('galerias_id')
+				->references('id')
+				->on('galerias');
+
 			$table->timestamps();
+
 		});
 	}
 

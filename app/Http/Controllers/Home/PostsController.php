@@ -110,7 +110,7 @@ class PostsController extends Controller {
 	public function update(EditPostRequest $request, $id)
 	{
 
-		$tag = Post::findOrFail($id);
+		$post = Post::findOrFail($id);
 
 		//dd($post->tag);
 

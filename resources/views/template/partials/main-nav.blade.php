@@ -16,14 +16,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nosotros<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="biografia.php">Biografia</a></li>
+                        <li><a href="biografia/" >Biografia</a></li>
                         <li class="divider"></li>
-                        <li><a href="contacto.php">Conctacto</a></li>
+                        <li><a href="contacto/">Conctacto</a></li>
                     </ul>
                 </li>
-                <li><a href="index.php#anclaje">Noticias</a></li>
-                <li><a href="discografia.php">Discografia</a></li>
-                <li><a href="#" >Videos</a></li>
+                <li><a href="{{route('home')}}#anclaje">Noticias</a></li>
+                <li><a href="discografia/">Discografia</a></li>
+                <li><a href="hola/" >Videos</a></li>
                 <li><a href={{route('galerias')}}>Galleria</a></li>
                 <li><a href="store.php">Store</a></li>
             </ul>

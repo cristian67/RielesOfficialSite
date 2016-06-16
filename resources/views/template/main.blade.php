@@ -9,8 +9,11 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Lobster+Two' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
     <link rel="stylesheet" href="{{asset('css/efectos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/video.css')}}">
     <link rel="stylesheet" href="{{asset('css/gallery.css')}}">
     <link rel="stylesheet" href="{{asset('css/trumbowyg.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
+    <link rel="stylesheet" href="{{asset('css/music.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
@@ -23,7 +26,11 @@
 <script src="{{asset('js/trumbowyg.min.js')}}"></script>
 <script src="{{asset('js/pinterest_grid.js')}}"></script>
 <script src="{{asset('js/gallery.js')}}"></script>
+<script src="{{asset('js/video.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/dropzone.js')}}"></script>
+<script src="{{asset('js/music.js')}}"></script>
+
 
 <script>
     $(window).scroll(function() {
@@ -38,6 +45,7 @@
         };
     });
 </script>
+
 @yield('js')
 </body>
 </html>

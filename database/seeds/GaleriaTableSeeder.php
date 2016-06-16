@@ -16,14 +16,15 @@ class GaleriaTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        for ($i=0 ; $i<30 ; $i++) {
+        for ($i=0 ; $i<9 ; $i++) {
 
-            $id = \DB::table('multimedias')->insertGetId(array(
+            $id = \DB::table('galerias')->insertGetId(array(
 
+                'title'       => $faker->catchPhrase,
 
                 'description' => $faker->paragraph(rand(2,5)),
 
-                'url'         => $faker->imageUrl($width = 640, $height = 480),
+                'photo'         => $faker->imageUrl($width = 640, $height = 480),
 
                 'type'        => 'imagen'
 

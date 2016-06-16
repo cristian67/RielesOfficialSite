@@ -2,14 +2,13 @@
 @section('title')@endsection
 @section('content')
 @include('template.partials.logbar')
-        <!-- tabla -->
+<!-- tabla -->
+<body class="fondo4">
 <div class="row-fluid">
     <div class="container" id="admin">
         @if(Session::has('message'))
-
             <p class="alert alert-info">{{Session::get('message')}} </p>
         @endif
-
         <table  class="table table-striped table-hover table-bordered">
             <thead style="color: deepskyblue">
             <th>Titulo</th>
@@ -40,4 +39,6 @@
         </div>
     </div>
 </div>
+</body>
+@include('template.partials.Adminfooter')
 @stop

@@ -1,6 +1,7 @@
 <?php namespace Blog\Http\Controllers;
 
 use Blog\Post;
+use Blog\Song;
 use phpDocumentor\Reflection\DocBlock\Tag;
 
 
@@ -22,6 +23,25 @@ class WelcomeController extends Controller {
 	{
 		$posts = Post::orderBy('id','desc')->paginate(35);
 		return view('welcome',compact('posts'));
+
+	}
+
+	public function biografia()
+	{
+		return view('bio');
+
+	}
+
+	public function audio()
+	{
+		$songs = Song::first()->select('title','lyrics','ruta','cash')->get();
+		return view('audio')
+			->with('songs',$songs);
+
+	}
+	public function contacto()
+	{
+		return view('contacto');
 
 	}
 

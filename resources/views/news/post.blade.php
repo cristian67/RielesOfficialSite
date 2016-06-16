@@ -1,9 +1,9 @@
 <div class="container text-center" >
-    <section id="posts">
+    <section class="section" id="posts">
         @foreach($posts as $p)
             <div class="post white-panel">
                 <h3 style="font-family: 'Lobster Two', cursive;">{{$p->title}}</h3><hr>
-                <img src ='{{$p->photo}}' width="200">
+                <img class="photo" src ='{{$p->photo}}' width="200">
                 <div class="post panel-info">
                     <p>{{$p->description}}</p>
                     <p>
@@ -11,9 +11,9 @@
                         <a href="tag/{{$t->tags}}"><label class="label label-primary">#{{$t->tags}}</label></a>
                         @endforeach
                     <p>
-                        <a href='articulos/{{$p->slug}}' class="btn btn-info">Leer más</a>
-                    <p>
-                        <label class="label label-warning"><i class="glyphicon glyphicon-calendar">Creado: {{$p->created_at}}</i></label>
+                    <div align="center"><a href='articulos/{{$p->slug}}' class="btn btn-info">Leer más</a></div>
+                    <hr>
+                        <label class="label label-warning"><i class="glyphicon glyphicon-calendar">{{$p->created_at}}</i></label>
                     </p>
                 </div>
             </div>

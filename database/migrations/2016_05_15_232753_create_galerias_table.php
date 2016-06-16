@@ -16,7 +16,7 @@ class CreateGaleriasTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
-			$table->enum('type', ['imagen','video']);
+			$table->enum('type', ['imagen','video','neutro']);
 			$table->text('description');
 			$table->string('photo');
 

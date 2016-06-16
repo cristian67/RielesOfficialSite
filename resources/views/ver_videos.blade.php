@@ -18,16 +18,24 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-12">
                     @foreach($galeria as $g)
+                        @if($g->type != 'imagen')
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe width="600" height="338" src="{{$g->url}}" frameborder="1" allowfullscreen></iframe>
                         </div>
                         <p></p>
                         <div align="center">
-                            <label class="label label-info"><i class="glyphicon glyphicon-book">Descrip: {{$g->description}}</i></label>
                             <label class="label label-warning "align="left"><i class="glyphicon glyphicon-calendar">Creado : {{$g->created_at}}</i></label>
                         </div>
+                        @endif
                         <p>
                         <p>
+                        @if($g->type != 'video')
+                            <div class="gallery">
+                                <ul>
+                                    <li><img src="{{$g->url}}" alt="{{$g->description}}"></li>
+                                </ul>
+                            </div>
+                        @endif
                     @endforeach
                 </div>
             </div>

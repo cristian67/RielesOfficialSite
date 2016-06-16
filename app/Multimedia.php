@@ -11,7 +11,7 @@ class Multimedia extends Model {
      *
      * @var array
      */
-    protected $fillable = ['description', 'url'];
+    protected $fillable = ['description', 'url','type','url','galerias_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -20,8 +20,8 @@ class Multimedia extends Model {
      */
     protected $hidden = [];
 
-    public function galerias()
+    public function galeria()
     {
-        return $this->belongsToMany('Blog\Galerias','galeria_multimedia','galerias_2_id','multimedias_2_id');
+        return $this->belongsTo('Galeria');
     }
 }

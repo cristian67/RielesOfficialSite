@@ -13,13 +13,26 @@
     </div>
     <body class="fondo3">
     <div class="container">
-        <div class="gallery">
-            @foreach($galeria as $g)
+        @foreach($galeria as $g)
+            @if($g->type != 'imagen')
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="600" height="338" src="{{$g->url}}" frameborder="1" allowfullscreen></iframe>
+                </div>
+                <p></p>
+                <div align="center">
+                    <label class="label label-warning "align="left"><i class="glyphicon glyphicon-calendar">Creado : {{$g->created_at}}</i></label>
+                </div>
+            @endif
+            <p>
+            <p>
+            @if($g->type != 'video')
+                <div class="gallery">
                     <ul>
                         <li><img src="{{$g->url}}" alt="{{$g->description}}"></li>
                     </ul>
-            @endforeach
-        </div>
+                </div>
+            @endif
+        @endforeach
     </div>
     </body>
     @include('template.partials.footer')

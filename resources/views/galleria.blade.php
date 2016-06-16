@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-        <body class="fondo2">
+        <body class="fondo">
             <div class="container">
                     <div class="grid">
                         <div class="row">
