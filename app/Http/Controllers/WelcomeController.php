@@ -2,6 +2,7 @@
 
 use Blog\Post;
 use Blog\Song;
+use Blog\Galeria;
 use phpDocumentor\Reflection\DocBlock\Tag;
 
 
@@ -21,7 +22,13 @@ class WelcomeController extends Controller {
 		/* Funcionando */
 	public function index()
 	{
-		$posts = Post::orderBy('id','desc')->paginate(35);
+		$posts = Post::orderBy('id','desc')
+				->select('posts.*','tags.tags as tags')
+				->leftJoin('post_tag', 'posts.id', '=', 'post_tag.posts_2_id')
+				->leftJoin('tags', 'post_tag.tags_2_id', '=', 'tags.id')
+				->paginate(35);
+		//dd($posts);
+
 		return view('welcome',compact('posts'));
 
 	}
@@ -74,10 +81,16 @@ class WelcomeController extends Controller {
 
 	public function videos()
 	{
-		$videos = \DB::table('videos')->orderBy('id','desc')->paginate(4);
+		$galeria = Galeria::orderBy('id','desc')
+			->select('multimedias.*','galerias.type','galerias.title as titulo')
+			->where('galerias.type','=','video')
+			->join('multimedias', 'galerias.id', '=', 'multimedias.galerias_id')
+			->get();
+
+		//return dd($galeria);
 
 		return view('video')
-			->with('videos',$videos);
+			->with('galeria',$galeria);
 
 	}
 

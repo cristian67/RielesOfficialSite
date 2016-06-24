@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Validator;
 
 class MultimediasController extends Controller {
 
+	 public function __construct()
+    {
+        $this->middleware('auth');
+    }
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -58,9 +62,9 @@ class MultimediasController extends Controller {
 		$rules = array(
 
 			'description' 	 => 'required',
-			'url'     => 'required',
-			'type'       => 'required',
-			'galerias_id'  => 'required'
+			'url'     		 => 'required',
+			'type'           => 'required',
+			'galerias_id'    => 'required'
 
 		);
 
@@ -140,14 +144,14 @@ class MultimediasController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$multi = Galeria::findOrFail($id);
+		$multi = Multimedia::findOrFail($id);
 
 		$multi->delete();
 
 		//Mensaje para eliminar
 		Session::flash('message','La :' . $multi->description . ', fue eliminada');
 
-		return Redirect::route('home.songs.index');
+		return Redirect::route('home.multimedias.index');
 	}
 
 }

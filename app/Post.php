@@ -46,7 +46,11 @@ class Post extends Model implements SluggableInterface {
         return $this->tags->tags;
     }
 
-
-
-
+    public function scopeName($query, $name)
+    {
+        if(trim($name) != '')
+        {
+                $query->where('title', "LIKE", '%'.$name.'%');
+        }
+    }
 }

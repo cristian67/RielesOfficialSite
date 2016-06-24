@@ -5,7 +5,7 @@
     <div class="row-fluid">
         <div class="container">
             <div class="jumbotron">
-                <h1 class="text-center"> Generar multimedia</h1>
+                <h1 class="text-center"> Generar Galeria</h1>
             </div>
         </div>
     </div>

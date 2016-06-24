@@ -6,11 +6,14 @@
                 <img class="photo" src ='{{$p->photo}}' width="200">
                 <div class="post panel-info">
                     <p>{{$p->description}}</p>
+                    @if($p->tags != '')
                     <p>
-                        @foreach($p->tags as $t)
-                        <a href="tag/{{$t->tags}}"><label class="label label-primary">#{{$t->tags}}</label></a>
-                        @endforeach
+                        <?php $tags = explode(',' , $p->tags); ?>
+                            @foreach($tags as $t)
+                                <a href="tag/{{$t}}"><label class="label label-primary">#{{$t}}</label></a>
+                            @endforeach
                     <p>
+                    @endif
                     <div align="center"><a href='articulos/{{$p->slug}}' class="btn btn-info">Leer más</a></div>
                     <hr>
                         <label class="label label-warning"><i class="glyphicon glyphicon-calendar">{{$p->created_at}}</i></label>

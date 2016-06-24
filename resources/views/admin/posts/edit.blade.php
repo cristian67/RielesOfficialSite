@@ -13,11 +13,12 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-warning">
-                    <div class="panel-heading">Actualizar: {{$post->title}}</div>
+                    @foreach($posts as $p)
+                    <div class="panel-heading">Actualizar:{{$p->title}}</div>
                     <div class="panel-body">
                         @include('admin.partials.message')
                         <!-- "model" es para cargar los datos, ai q pasar post en la url x eso el route es array-->
-                        {!! Form::model($post,['route' => ['home.posts.update',$post], 'method' => 'PUT']) !!}
+                        {!! Form::model($p,['route' => ['home.posts.update',$p], 'method' => 'PUT']) !!}
                         <!-- Campos del formulario -->
                         @include('admin.posts.partials.fields')
                         <input type="submit" value="Actualizar" class="btn btn-block btn-success">
@@ -26,6 +27,7 @@
                         @include('admin.posts.partials.delete')
                     </div>
                 </div>
+                    @endforeach
             </div>
         </div>
     </div>

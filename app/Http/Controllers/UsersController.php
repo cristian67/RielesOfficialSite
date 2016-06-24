@@ -13,6 +13,8 @@ class UsersController extends Controller{
     /**
      *
      */
+
+
     public function getOrm()
     {
         $users = User::select('id','first_name')

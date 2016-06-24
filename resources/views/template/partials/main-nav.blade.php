@@ -23,9 +23,9 @@
                 </li>
                 <li><a href="{{route('home')}}#anclaje">Noticias</a></li>
                 <li><a href="discografia/">Discografia</a></li>
-                <li><a href="hola/" >Videos</a></li>
+                <li><a href="videos/" >Videos</a></li>
                 <li><a href={{route('galerias')}}>Galleria</a></li>
-                <li><a href="store.php">Store</a></li>
+                <li><a href="#">Store</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://www.facebook.com/Rieles-Banda-839224162828964/"><i class="fa fa-facebook-square fa-2x"></i></a></li>

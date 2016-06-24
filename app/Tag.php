@@ -6,6 +6,7 @@ class Tag extends Model {
 
     protected  $table='tags';
 
+     protected $fillable = ['tags'];
 
     public function posts()
     {

@@ -36,6 +36,11 @@
     background-attachment:fixed;
     font-size: medium;
 }
+.lo{
+    background-image: url("http://cdn29.us1.fansshare.com/pictures/concert/concert-music-1591429668.jpg");
+    background-attachment:fixed;
+    font-size: medium;
+}
 /*barra principal */
 .navbar-brand{
     padding: 29.5px 15px 40px 15px;
@@ -103,7 +108,7 @@ span.redes a
 
 .avatar
 {
-    border: 2px solid     orange;
+    border: 2px solid orange;
     border-radius: 80%;
     float: center;
     height: 100px;

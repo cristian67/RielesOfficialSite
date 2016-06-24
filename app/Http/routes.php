@@ -16,7 +16,7 @@ Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function(){
 	Route::resource('users','UsersController');
 });
 
-Route::group(['prefix' => 'home', 'namespace'=>'Home'], function(){
+Route::group(['prefix' => 'home',  'namespace'=>'Home'], function(){
 
 	Route::resource('posts','PostsController');
 	Route::resource('songs','SongsController');
@@ -40,14 +40,6 @@ Route::group(['prefix' => 'galeria', 'namespace'=>'Galeria'], function(){
 
 
 
-/*Puebas Controller */
-Route::controllers([
-		'users' => 'UsersController',
-		'auth' => 'Auth\AuthController',
-		'password' => 'Auth\PasswordController',
-	]);
-
-
 /*biografia modelo ^^*/
 Route::get('/biografia', [
 	'uses'=> 'WelcomeController@biografia',
@@ -62,6 +54,11 @@ Route::get('/audio', [
 Route::get('/contacto', [
 	'uses'=> 'WelcomeController@contacto',
 	'as' => 'contacto'
+]);
+/*audio reproducir*/
+Route::get('/videos', [
+	'uses'=> 'WelcomeController@videos',
+	'as' => 'videos'
 ]);
 
 /*Index Route funcionando ^^*/
@@ -124,13 +121,12 @@ Route::group(['prefix'=>'couch','namespace'=>'Couch'],function(){
 });
 
 Route::get('/logout', [
-	'uses' => 'AdminController@logout',
-	'as' => 'logout'
+		'uses' => 'AdminController@logout',
+		'as' => 'logout'
 
-]);
+	]);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-
