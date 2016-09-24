@@ -14,28 +14,7 @@
 }
 
 /* Fondos */
-.fondo{
-    background-image: url("../img/forest.jpg");
-    background-attachment:fixed;
-    font-family: 'Poiret One', cursive;
-    font-size: medium
-}
-.fondo2{
-    background-image: url("../img/riel3.jpg");
-    background-attachment:fixed;
-    font-size: medium
-}
 
-.fondo3{
-    background-image: url("../img/dark.jpg");
-    background-attachment:fixed;
-    font-size: medium
-}
-.fondo4{
-    background-image: url("http://www.hdwallwide.com/wp-content/uploads/2014/10/live-concert-crowd-hd-wallpapers-1080p-hdwallwide-com.jpg");
-    background-attachment:fixed;
-    font-size: medium;
-}
 .lo{
     background-image: url("http://cdn29.us1.fansshare.com/pictures/concert/concert-music-1591429668.jpg");
     background-attachment:fixed;
@@ -167,7 +146,7 @@ span.redes a
 
 /* Media Querys para hacer Responsivo el texto Titulo y subTi.. */
 
-@media(max-width: 750px) {
+@media(max-width: 755px) {
 
     #title {
         font-size: 3em;
@@ -244,8 +223,8 @@ span.redes a
 
 #tagged	{
     color: white;
-    font-size: 3em;
-    padding-top: 12vh;
+    font-size: 1.5em;
+    padding-top: 10vh;
     text-align: center;
 }
 

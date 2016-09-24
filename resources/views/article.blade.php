@@ -43,7 +43,7 @@
     <div class="container">
         <div class="col-xs-12">
             <div align="center">
-                    <div class="fb-comments" data-colorscheme="dark" data-href="http://localhost/blog/public/articulos/{{$post->slug}}" data-width="100%" data-numposts="10"></div>
+                    <div class="fb-comments" data-colorscheme="light" data-href="http://localhost/blog/public/articulos/{{$post->slug}}" data-width="100%" data-numposts="10"></div>
                     <!-- Fin -->
                     <a href="{{route('home')}}" class="btn  btn-primary center-block"><i class="fa fa-chevron-left"></i> Home </a>
                     <br>
