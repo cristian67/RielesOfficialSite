@@ -2,13 +2,13 @@
 @section('title'){{'Bienvenido'}}@endsection
 @section('content')
     @include('template.partials.main-nav')
-    <div class="row-fluid" style="background-image: url('../img/mail.jpg'); min-height: 50vh; background-size: cover; background-position: center; background-attachment: fixed">
-        <div class="blur">
+<section class="blur">  
+    <div class="row-fluid" style="min-height: 50vh; background-size: cover; background-position: center; background-attachment: fixed">
             <div id="artitle" class="croisant">
                 <h1 class="croisant">Mail <span style= "color: orangered;">Rieles</span></h1>
             </div>
-        </div>
     </div>
+</section>  
 <body style="background:#c85904;>
     <div class="contact-content">
         @if(Session::has('message'))
@@ -32,6 +32,13 @@
             </div>
             <p>
         </div>
+    </div>
+    <a href="{{route('home')}}" class="btn  btn-primary center-block"><i class="fa fa-chevron-left"></i> Home </a>
 </body>
-    @include('template.partials.footer')
+    <div class="visible-lg visible-md visible-sm">
+        @include('template.partials.footer')
+    </div>
+    <div class="visible-xs">
+        @include('template.partials.Cellfooter')
+    </div>
 @stop

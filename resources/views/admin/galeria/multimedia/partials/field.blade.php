@@ -1,12 +1,12 @@
 
 <div class="form-group">
     {!!  Form::label('description', 'Descripción:') !!}
-    {!! Form::text('description', null, ['class' => 'form-control']) !!}
+    {!! Form::text('description', null, ['class' => 'form-control','placeholder'=>'Ingresar descripcion']) !!}
 </div>
 
 <div class="form-group">
     {!!  Form::label('url', 'Foto/video:') !!}
-    {!! Form::text('url', null, ['class' => 'form-control']) !!}
+    {!! Form::text('url', null, ['class' => 'form-control','placeholder'=>'Ingresar imagen ej : http://cdn01.ib.infobae.com/adjuntos/162/imagenes/014/014/0014014674.jpg']) !!}
 </div>
 
 <div>

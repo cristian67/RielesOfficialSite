@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand croisant alert-danger" href={{route('home')}}>Rieles</a></p>
+            <a class="navbar-brand croisant alert-danger visible-sm visible-md visible-lg" href={{route('home')}}>Rieles</a></p>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,7 @@
                 <li><a href="discografia/">Discografia</a></li>
                 <li><a href="videos/" >Videos</a></li>
                 <li><a href={{route('galerias')}}>Galleria</a></li>
-                <li><a href="#">Store</a></li>
+                <li><a href="https://www.rielesbanda.hol.es">Store</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://www.facebook.com/Rieles-Banda-839224162828964/"><i class="fa fa-facebook-square fa-2x"></i></a></li>

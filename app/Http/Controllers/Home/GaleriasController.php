@@ -5,6 +5,7 @@ use Blog\Http\Controllers\Controller;
 
 use Blog\Http\Requests\EditGaleriaRequest;
 use Blog\Galeria;
+use Blog\Multimedia;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -72,7 +73,7 @@ class GaleriasController extends Controller {
 		$galeria = Galeria::create($data);
 
 		//Mensaje para crear
-		Session::flash('message','La cancion:' . $galeria->title . ', fue creada');
+		Session::flash('message','La galeria:' . $galeria->title . ', fue creada');
 
 		return Redirect::route('home.galerias.index');
 	}
@@ -131,8 +132,16 @@ class GaleriasController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$galerias = Galeria::findOrFail($id);
+		
+		
 
+		$multi = Multimedia::where('galerias_id','=',$id)->delete();
+
+		//dd($multi);
+
+		
+
+		$galerias = Galeria::findOrFail($id);
 		$galerias->delete();
 
 		//Mensaje para eliminar

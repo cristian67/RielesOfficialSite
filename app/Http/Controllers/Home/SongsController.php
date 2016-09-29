@@ -148,7 +148,7 @@ class SongsController extends Controller {
 		$post->delete();
 
 		//Mensaje para eliminar
-		Session::flash('message','La noticia:' . $post->title . ', fue eliminada');
+		Session::flash('message','La cancion:' . $post->title . ', fue eliminada');
 
 		return Redirect::route('home.songs.index');
 	}

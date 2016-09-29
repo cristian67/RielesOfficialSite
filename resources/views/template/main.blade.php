@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="{{asset('css/video.css')}}">
     <link rel="stylesheet" href="{{asset('css/gallery.css')}}">
     <link rel="stylesheet" href="{{asset('css/trumbowyg.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
-    <link rel="stylesheet" href="{{asset('css/music.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+    <link href="{{asset('img/icon.ico')}}" type="image/x-icon" rel="shortcut icon" />
 </head>
 <body id="@yield('id')">
 @yield('content')
@@ -28,10 +26,6 @@
 <script src="{{asset('js/gallery.js')}}"></script>
 <script src="{{asset('js/video.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
-<script src="{{asset('js/dropzone.js')}}"></script>
-<script src="{{asset('js/music.js')}}"></script>
-
-
 <script>
     $(window).scroll(function() {
         /* Act on the event */
@@ -46,6 +40,24 @@
     });
 </script>
 
+<script >
+$(document).ready(function(){
+  $(".set > a").on("click", function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass("active");
+      $(this).siblings('.content').slideUp(200);
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+    }else{
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+    $(this).find("i").removeClass("fa-plus").addClass("fa-minus");
+    $(".set > a").removeClass("active");
+    $(this).addClass("active");
+    $('.content').slideUp(200);
+    $(this).siblings('.content').slideDown(200);
+    } 
+  });
+});
+</script>
 @yield('js')
 </body>
 </html>

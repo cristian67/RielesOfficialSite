@@ -15,27 +15,27 @@
     margin: 2.5%;
     position: relative;
     font-size: 0;
-    transition: .25s box-shadow ease-in-out .1s;
+   transition: .25s box-shadow ease-in-out .1s;
 }
 
 @media only screen and (max-width: 680px) {
-    .gallery li {
-        width: 45%;
-    }
-    .lightbox img {
-        margin-top: 5%;
-    }
+  .gallery li {
+    width: 45%;
+  }
+  .lightbox img {
+    margin-top: 5%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .gallery li {
-        width: 100%;
-        margin: 2% 0;
-    }
+  .gallery li {
+    width: 100%;
+    margin: 2% 0;
+  }
 }
 
 .gallery li:hover{
-    box-shadow: 0 0 15px #4e5d6a;
+  box-shadow: 0 0 15px #4e5d6a;
 }
 
 .gallery img{
@@ -54,12 +54,12 @@
     top: 0;
     left: 0;
     z-index: 20;
-    padding-top: 30px;
+    padding-top: 100px;
     box-sizing: border-box;
 }
 
 .lightbox img{
-    max-width: 80%;
+    max-width: 25%;
     margin-right: auto;
     margin-left: auto;
     display: block;

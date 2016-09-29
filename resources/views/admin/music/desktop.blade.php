@@ -31,7 +31,7 @@
                     @foreach($songs as $s)
                         <tr>
                             <td>{{$s->titulo}}</td>
-                            <td>${{$s->precio}}.0</td>
+                            <td>${{$s->precio}}</td>
                             <td>{{$s->title}}</td>
                             <td>{{$s->id_song}}</td>
                             <td>

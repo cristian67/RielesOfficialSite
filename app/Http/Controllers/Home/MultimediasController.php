@@ -28,8 +28,8 @@ class MultimediasController extends Controller {
 	{
 
 		$multi = Galeria::orderBy('id','desc')
-			->select('multimedias.*','galerias.type as tipo','galerias.title as titulo')
-			->join('multimedias', 'galerias.id', '=', 'multimedias.galerias_id')
+			->select('Multimedias.*','galerias.type as tipo','galerias.title as titulo')
+			->join('Multimedias', 'galerias.id', '=', 'Multimedias.galerias_id')
 			->paginate();
 
 		return view('admin.galeria.multimedia.desktop')
@@ -80,7 +80,7 @@ class MultimediasController extends Controller {
 		$post = Multimedia::create($data);
 
 		//Mensaje para crear
-		Session::flash('message','La cancion:' . $post->title . ', fue creada');
+		Session::flash('message','La cancion:' . $post->description. ', fue creada');
 		return Redirect::route('home.multimedias.index');
 	}
 

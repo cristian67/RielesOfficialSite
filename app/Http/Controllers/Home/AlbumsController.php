@@ -73,7 +73,7 @@ class AlbumsController extends Controller {
 		$post = Album::create($data);
 
 		//Mensaje para crear
-		Session::flash('message','La cancion:' . $post->title . ', fue creada');
+		Session::flash('message','El album:' . $post->title . ', fue creada');
 
 		return Redirect::route('home.albums.index');
 	}
@@ -119,7 +119,7 @@ class AlbumsController extends Controller {
 
 		$album->save();
 
-		Session::flash('message','La noticia:' . $album->title . ', fue Actualizada');
+		Session::flash('message','El album:' . $album->title . ', fue Actualizada');
 
 		return Redirect::route('home.albums.index');
 	}
@@ -132,12 +132,17 @@ class AlbumsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$post = Song::findOrFail($id);
+		
+		$songs = Song::where('albums_id','=',$id)->delete();
 
-		$post->delete();
+		//dd($multi);
 
+		
+
+		$album = Album::findOrFail($id);
+		$album->delete();
 		//Mensaje para eliminar
-		Session::flash('message','La noticia:' . $post->title . ', fue eliminada');
+		Session::flash('message','El album:' . $album->title . ', fue eliminada');
 
 		return Redirect::route('home.songs.index');
 	}

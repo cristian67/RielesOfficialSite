@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-primary">
-                <div class="panel-heading">Noticias</div>
+                <div class="panel-heading">Discografía</div>
                 <p> Hay {{ $albums->lastPage() }} páginas ,
                     existen {{ $albums->total() }} registros</p>
                 <div class="panel body">
@@ -31,7 +31,7 @@
                     @foreach($albums as $s)
                         <tr>
                             <td>{{$s->title}}</td>
-                            <td>${{$s->cash}}.0</td>
+                            <td>${{$s->cash}}</td>
                             <td>{{$s->description}}</td>
                             <td>
                                 <div class="btn-group-center">

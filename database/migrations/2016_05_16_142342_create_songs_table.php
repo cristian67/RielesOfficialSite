@@ -17,8 +17,7 @@ class CreateSongsTable extends Migration {
 			$table->increments('id');
 
 			$table->string('title');
-			$table->string('ruta');
-			$table->string('size');
+			$table->string('ruta', 355);
 			$table->string('type');
 			$table->text('description');
 			$table->text('lyrics');

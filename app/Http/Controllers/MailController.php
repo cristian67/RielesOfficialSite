@@ -41,10 +41,10 @@ class MailController extends Controller
     {
         Mail::send('emails.contact',$request->all(), function($msj){
             $msj->subject('Correo de Contacto');
-            $msj->to('palacios.raul02@gmail.com');
+            $msj->to('rielesbandaoficial@gmail.com');
         });
         Session::flash('message','Mensage enviado correctamente');
-        return Redirect::to('contacto');
+        return Redirect::to('/contacto');
     }
 
     /**

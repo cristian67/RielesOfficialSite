@@ -18,6 +18,8 @@ class CreateAlbumsTable extends Migration {
 			$table->string('title');
 			$table->text('description');
 			$table->float('cash');
+			$table->string('photo',255);
+
 			$table->date('creation');
 
 			$table->timestamps();

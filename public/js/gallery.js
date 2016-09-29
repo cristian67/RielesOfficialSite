@@ -1,21 +1,14 @@
-// Create a lightbox
-
 var $lightbox = $("<div class='lightbox'></div>");
 var $img = $("<img>");
 var $caption = $("<p class='caption'></p>");
 
 
 // Add image and caption to lightbox
-
 $lightbox
     .append($img)
     .append($caption);
-
 // Add lighbox to document
-
 $('body').append($lightbox);
-
-
 $('.gallery li').click(function (e) {
     e.preventDefault();
 
@@ -27,6 +20,8 @@ $('.gallery li').click(function (e) {
 
     $img.attr('src',src);
     $caption.text(cap);
+
+    // $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
 
     // Show lightbox
 

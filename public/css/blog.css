@@ -1,6 +1,10 @@
 /*font */
 @import url(http://fonts.googleapis.com/css?family=Croissant+One);
 
+body {
+    background:#0c0305;
+}
+
 .croisant{
     font-family: 'Croissant One', cursive;
 }
@@ -14,9 +18,20 @@
 }
 
 /* Fondos */
+.fondo4{
+    background-image: url("http://www.hdwallwide.com/wp-content/uploads/2014/10/live-concert-crowd-hd-wallpapers-1080p-hdwallwide-com.jpg");
+    background-attachment:fixed;
+    font-size: medium;
+}
+.fondo{
+    background-image: url("../img/forest.jpg");
+    background-attachment:fixed;
+    font-family: 'Poiret One', cursive;
+    font-size: medium
+}
 
 .lo{
-    background-image: url("http://cdn29.us1.fansshare.com/pictures/concert/concert-music-1591429668.jpg");
+    background-image: url("../img/music.jpg");
     background-attachment:fixed;
     font-size: medium;
 }
@@ -146,7 +161,7 @@ span.redes a
 
 /* Media Querys para hacer Responsivo el texto Titulo y subTi.. */
 
-@media(max-width: 755px) {
+@media(max-width: 750px) {
 
     #title {
         font-size: 3em;
@@ -163,7 +178,7 @@ span.redes a
     }
 
     header {
-        background-image: url(http://rielesbanda.hol.es/img/rieles4Ma.jpg);
+        background-image: url("http://cdn29.us1.fansshare.com/pictures/concert/concert-music-1591429668.jpg");
         min-height: 85vh;
         background-size: cover;
         background-position: center;
@@ -174,6 +189,47 @@ span.redes a
     footer{
         min-height: 150px;
         background: #009E66;
+    }
+
+}
+@media screen and (max-width: 991px) {
+
+    header {
+        background-image: url("http://cdn29.us1.fansshare.com/pictures/concert/concert-music-1591429668.jpg");
+    }
+}
+
+/* ESTILO MOVIL VERTICAL*/
+@media (max-width: 480px) {
+    
+    body{
+            background-color: black;
+        }
+        
+    #letras{
+        width: 100%;
+        max-width: 100%;
+        color: white;
+        text-align: center;
+        margin-top: 2%;
+    }
+    p{
+        font-size: 9px;
+    }
+    h2{
+        font-size: 11px;
+    }
+    h3{
+        font-size: 10px;
+    }
+    h4{
+        font-size: 10px;
+    }
+    h5{
+        font-size: 7px;
+    }
+    h6{
+        font-size: 6px;
     }
 
 }
@@ -213,7 +269,6 @@ span.redes a
 /* Estilo del tag*/
 
 #tag{
-    background-image: url('https://scontent-grt2-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/11822526_875501389201241_2226980070287557737_n.jpg?oh=c6f19535699aed3528b1a93241738b1d&oe=57971617');
     min-height: 35vh;
     background-size: cover;
     background-position: center;
@@ -223,8 +278,8 @@ span.redes a
 
 #tagged	{
     color: white;
-    font-size: 1.5em;
-    padding-top: 10vh;
+    font-size: 3em;
+    padding-top: 12vh;
     text-align: center;
 }
 
@@ -253,7 +308,6 @@ span.redes a
 
 #bhome{
     min-height: 40vh;
-    background-image: url('https://download.unsplash.com/photo-1428223501723-d821c5d00ca3');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -307,7 +361,7 @@ span.redes a
 }
 
 /* face responsivo*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
     .fb-comments {
         width: 100% !important;
     }

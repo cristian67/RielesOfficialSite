@@ -33,6 +33,11 @@
                         <li><a href="{{route('home.galerias.create')}}"><font color = "#006400" ><i class="fa fa-plus"></i> Add Galeria</a></li></font>
                         <li class="divider"></li>
                         <li><a href="{{route('home.posts.create')}}"><font color = "green" ><i class="fa fa-plus"></i> Crear entrada</a></li></font>
+                        <li class="divider"></li>
+                        <li><a href="{{route('admin.users.create')}}"><font color = "red" ><i class="fa fa-plus"></i> Crear usuario</a></li></font>
+                        <li><a href="{{route('admin.users.index')}}" ><i class="fa fa-user" style="color: red "> Usuarios </a></i></li>
+
+
                     </ul>
                 </li>
                 <p class="navbar-text">
@@ -50,10 +55,9 @@
                 <p class="navbar-text">
                     <a href="{{route('home.multimedias.index')}}" ><i class="fa fa-camera-retro" style="color: deepskyblue"> Imagenes Panel</a></i>
                 </p>
-
                 {!! Form::model(Request::only(['name','type']), ['route' => 'home.posts.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right', 'role'=>'search']) !!}
                 <div class="form-group">
-                    {!! Form::text('name', null , ['class'=>'form-control','placeholder'=>'Nombre de usuario']) !!}
+                    {!! Form::text('name', null , ['class'=>'form-control','placeholder'=>'Buscar publicación']) !!}
                 </div>
                 <button type="submit" class="btn btn-default">Buscar</button>
                 {!! Form::close() !!}

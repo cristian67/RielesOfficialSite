@@ -82,9 +82,9 @@ class WelcomeController extends Controller {
 	public function videos()
 	{
 		$galeria = Galeria::orderBy('id','desc')
-			->select('multimedias.*','galerias.type','galerias.title as titulo')
+			->select('Multimedias.*','galerias.type','galerias.title as titulo')
 			->where('galerias.type','=','video')
-			->join('multimedias', 'galerias.id', '=', 'multimedias.galerias_id')
+			->join('Multimedias', 'galerias.id', '=', 'Multimedias.galerias_id')
 			->get();
 
 		//return dd($galeria);
