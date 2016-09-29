@@ -86,7 +86,7 @@
             </div>
             <br>
             <br>
-            <a href="https://www.rielesbanda.hol.es" class="btn  btn-success center-block"><i class="fa fa-shopping-cart"></i> Ir a tienda</a>
+            <a href="https://rielesbanda.bandcamp.com/releases" class="btn  btn-success center-block"><i class="fa fa-shopping-cart"></i> Ir a tienda</a>
             <a href="{{route('home')}}" class="btn  btn-primary center-block"><i class="fa fa-chevron-left"></i> Home </a>
         </body>
     
